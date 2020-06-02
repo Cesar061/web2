@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    background: url('/img/header-bg.jpg') center/cover fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    max-width: 15%;
+}
+
+img {
+    max-width: 100%;
+    padding: 1em;
+}
+
+
+/* MENU BAR */
+
+.menu-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 55px;
+    color: rgb(255, 255, 255);
+    z-index: 2;
+}
+
+.menu-bar__brand {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.menu-bar__list {
+    list-style: none;
+}
+
+.menu-bar__list-item {
+    display: inline-block;
+}
+
+.menu-bar__link {
+    padding: .5em 1em;
+    margin-left: .1em;
+    color: inherit;
+    text-decoration: none;
+}
+
+.menu-bar__list:last-child {
+    margin-right: .5em;
+}
+
+.menu-bar__link:hover {
+    box-shadow: -1px 1px 3px rgba(0, 0, 0, .7);
+    background-color: #46a5fd;
+    color: #000;
+}
+
+.menu-bar__brand {
+    width: 85px;
+}
+
+
+/* END MENU BAR */
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section:first-child {
+    height: 100vh;
+    background-color: black;
+}
+
+section:nth-child(2) {
+    background-color: rgb(255, 255, 255);
+}
+
+.bio {
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    width: 40vw;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 1em;
+    border-radius: 3%;
+}
+
+.bio-img {
+    border-radius: 50%;
+}
+
+.bio-title {
+    padding: .5em 0;
+}
+
+.bio-text {
+    padding: .5em .5em;
+    text-align: justify;
+}
+
+h2 {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: .5em;
+}
+
+.proyectos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 1em;
+}
+
+.proyectos-title {
+    border: none;
+}
+
+.img-card {
+    background-color: #fff;
+    padding: 0 .5em;
+    border: 2px solid #000;
+    margin: 1em;
+}
+
+.img-card_text {
+    text-align: justify;
+    padding: 1em .5em;
+}
+
+hr {
+    border: 1px solid #000;
+}
+
+.wraper {
+    display: flex;
+    justify-content: space-around;
+}
+
+#social {
+    background-color: rgb(0, 0, 0);
+    padding: 2em 1em;
+}
+
+#social ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+#social ul li {
+    padding: .3em;
+}
+
+#social ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1200px) {
+    .menu-bar {
+        flex-direction: row;
+    }
+    .bio {
+        width: 40vw;
+    }
+    .wraper {
+        flex-direction: row;
+    }
+    header img {
+        max-width: 25%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .menu-bar {
+        flex-direction: row;
+    }
+    .bio {
+        width: 70vw;
+    }
+    .wraper {
+        flex-direction: row;
+    }
+    header img {
+        max-width: 25%;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .menu-bar {
+        flex-direction: row;
+    }
+    .bio {
+        width: 90vw;
+    }
+    .wraper {
+        flex-direction: column;
+    }
+    header img {
+        max-width: 40%;
+    }
+    .menu-bar__list:last-child {
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    #social ul {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .menu-bar {
+        flex-direction: column;
+    }
+    .bio {
+        width: 90vw;
+    }
+    .wraper {
+        flex-direction: column;
+    }
+    header img {
+        max-width: 50%;
+    }
+    .menu-bar__list:last-child {
+        margin-right: 0;
+    }
+    #social ul {
+        flex-direction: column;
+    }
+}
+
+
+/* *************** */
